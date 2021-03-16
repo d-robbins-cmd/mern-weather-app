@@ -12,6 +12,7 @@ router.get("/weather",  async (req, res) => {
 
 
 router.post("/weather",  async (req, res) => {
+    console.log('req', req)
     const {zipCode, tempMetric} = req.body;
     let weather = new Weather();
     let weatherData = await weather.getWeatherDataFromMongo(zipCode, tempMetric);
