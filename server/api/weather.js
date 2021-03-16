@@ -1,4 +1,4 @@
-const WEATHER = require('"../models/Weather"');
+const WEATHER = require('../models/Weather');
 const axios = require("axios");
 
 // Configuring the path to read the environment variable file, .env, to get the weather api key
