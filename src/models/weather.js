@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const WeatherSchema = new mongoose.Schema({
     zip: Number,
@@ -48,6 +48,6 @@ const WeatherSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
-})
+});
 
-module.exports = mongoose.model('Weather', WeatherSchema)
+module.exports = mongoose.model('Weather', WeatherSchema);
