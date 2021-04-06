@@ -15,6 +15,7 @@ router.get("/weather",  async (req, res) => {
 
 router.post("/weather",  async (req, res) => {
     const {zipCode, tempMetric} = req.body;
+
     let weather = new Weather();
     let weatherData = await weather.getWeatherData(zipCode, tempMetric);
     res.header("Content-Type",'application/json');
@@ -22,9 +23,6 @@ router.post("/weather",  async (req, res) => {
 });
 
 
-
-
-// POST Request - get the weather data from the api, save it to mongo, then return the data back
 router.post("/weatherMongo", async(req, res) => {
     const {zipCode, tempMetric} = req.body;
     let weather = new Weather();
