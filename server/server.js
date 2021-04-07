@@ -16,11 +16,6 @@ app.use(express.urlencoded({ extended: true }));
 const apis = require("./api");
 app.use("/api", apis);
 
-//test line
-
-console.log('NODE_ENV', process.env.NODE_ENV)
-console.log('__dirname', __dirname)
-
 // If in production, then use static frontend build files.
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
