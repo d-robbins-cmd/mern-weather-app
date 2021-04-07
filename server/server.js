@@ -6,7 +6,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 
 // use body parser to get data from POST requests
 app.use(express.json());
