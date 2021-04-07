@@ -17,8 +17,7 @@ const apis = require("./api");
 app.use("/api", apis);
 
 
-// If in production, then use static frontend build files.
-if (process.env.NODE_ENV === 'production') {
+
     // Serve any static files
     app.use(express.static(path.join(__dirname, '../client/build')));
 
@@ -26,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
     app.get('*', function(req, res) {
         res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
     });
-}
+
 
 // Connect to Mongo
 mongoose.connect(process.env.DB, {
