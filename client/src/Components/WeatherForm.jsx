@@ -36,7 +36,7 @@ class WeatherForm extends Component {
 
     saveFormData = ( e ) =>{
         e.preventDefault()
-        axios.post( '/api/weather', {
+        axios.post( '/api/weatherMongo', {
             zipCode: this.state.zipCodeInput, 
             tempMetric: this.state.tempMetric
         }).then( response => {

@@ -1,8 +1,6 @@
 const axios = require("axios");
-
 const WEATHER = require("../../src/models/Weather");
 
-// Configuring the path to read the environment variable file, .env, to get the weather api key
 require('dotenv').config({path: "./../../../.env"});
 
 const baseUrl = "http://api.openweathermap.org/data/2.5/weather";
