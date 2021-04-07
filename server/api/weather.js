@@ -1,5 +1,5 @@
 const axios = require("axios");
-const WEATHER = require("../../src/models/Weather");
+const WEATHER = require('../../src/models/weather')
 
 require('dotenv').config({path: "./../../../.env"});
 
