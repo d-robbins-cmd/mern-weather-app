@@ -2,8 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 
-//new line
-
 const mongoose = require('mongoose');
 
 const app = express();
