@@ -41,6 +41,7 @@ class WeatherForm extends Component {
             tempMetric: this.state.tempMetric
         }).then( response => {
             let weatherData = response.data
+            this.saveToStore( weatherData )
             this.saveToLocalStorage( weatherData )
         })
     }
